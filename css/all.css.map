@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,AAAA,CACA,gBAAgB,CCDZ,IAAI,CDEX",
+    "sources": [
+        "../scss/all.scss",
+        "../scss/Helpers/_variant.scss"
+    ],
+    "names": [],
+    "file": "all.css"
+}
