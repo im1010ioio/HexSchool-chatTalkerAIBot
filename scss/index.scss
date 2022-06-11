@@ -1,6 +1,8 @@
 // helpers
 @import "./Helpers/variants";
 
+// header
+
 header{
     $outer-color-position: 50%;
     $outer-color: $color-brand-sub;
@@ -44,6 +46,7 @@ header{
         width: 50%;
     }
 }
+
 
 // section
 #section-social{
@@ -89,6 +92,15 @@ header{
     }
 }
 
+#section-ending {
+    padding-top: 20vw;
+    background-image: url("../images/home_footer.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .text-title {
+        font-size: $font-size-32;
+    }
+}
 
 
 @media screen and (max-width: 1025px) {
@@ -245,6 +257,14 @@ header{
                 min-width: 100%;
                 margin: 0;
             }
+        }
+    }
+    #section-ending{
+        padding-top: 80vw;
+        margin-bottom: 4.5rem;
+        background-image: url("../images/footer_sm.svg");
+        .text-title{
+            font-size: $font-size-24;
         }
     }
 }
