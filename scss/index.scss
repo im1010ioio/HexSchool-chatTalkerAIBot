@@ -15,10 +15,11 @@ header{
         background-color: $white;
         background-position: 140% 0;
         background-repeat: no-repeat;
-        min-height: 765px;
+        min-height: 768px;
+
+        // TODO:  圓形 RWD
         &:after{
             $circle-size: 22.5rem;
-
             content: "";
             position: absolute;
             left: -$circle-size;
@@ -40,19 +41,43 @@ header{
         justify-content: center;
     }
 
-    .text-title-lg{
-        margin-bottom: 1rem;
-    }
-
     .content-text, .content-img{
         width: 50%;
     }
 }
 
+
+// section
+#section-social{
+    h4{
+        margin: 1.5rem 0;
+    }
+    .img-social-logo{
+        width: 5.635rem;
+    }
+}
+
+#section-ch{
+    .row{
+        margin-top: 3rem;
+    }
+}
+
+
 @media screen and (max-width: 1025px) {
+    section:nth-child(1){
+        margin-top: 25px;
+    }
     header{
         .container{
             background-position: 200% 0;
+            &:after {
+                $circle-size: 18rem;
+                width: $circle-size;
+                height: $circle-size;
+                left: -$circle-size/3*2;
+                bottom: -$circle-size/6;
+            }
         }
     }
 }
@@ -61,7 +86,37 @@ header{
     header {
         .container {
             min-height: auto;
-            background-position: -200% 100%;
+            background-position: 100% 100%;
+            &:after {
+                $circle-size: 9rem;
+                width: $circle-size;
+                height: $circle-size;
+                left: -$circle-size/3*2;
+                bottom: -$circle-size/2;
+            }
+        }
+    }
+    #section-social{
+        .img-social-logo {
+            width: 4.25rem;
+        }
+    }
+
+    #section-ch{
+        .row{
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .item{
+            max-width: 292px;
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    header {
+        .container {
+            background-position: 100px 100%;
         }
     }
 }
@@ -70,6 +125,15 @@ header{
     header{
         &, .container{
             background: none;
+        }
+        .container{
+            &:after {
+                $circle-size: 7.5rem;
+                width: $circle-size;
+                height: $circle-size;
+                left: -$circle-size/3*2;
+                bottom: -15rem;
+            }
         }
         .header-content{
             flex-direction: column;
@@ -87,6 +151,26 @@ header{
             background-position: 100% 100%;
             background-repeat: no-repeat;
 
+        }
+    }
+
+    // section
+    section:nth-child(1){
+        margin-top: 100px;
+    }
+    #section-social{
+        h4{
+            margin: 1rem 0;
+        }
+        .img-social-logo {
+            width: 3.75rem;
+        }
+    }
+
+
+    #section-ch{
+        .card{
+            min-height: 388px;
         }
     }
 }

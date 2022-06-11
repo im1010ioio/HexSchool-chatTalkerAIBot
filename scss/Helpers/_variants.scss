@@ -1,15 +1,8 @@
 // Color system
 
 $white: #fff !default;
-$gray-100: #F4F6FB !default;
-$gray-200: #E9EBEF !default;
-$gray-300: #DBE1EB !default;
-$gray-400: #CFD3DA !default;
-$gray-500: #ADBAD1 !default;
-$gray-600: #7a87a2 !default;
-$gray-700: #6E6F83 !default;
-$gray-800: #3B4B5A !default;
-$gray-900: #1B2936 !default;
+$gray: #747474 !default;
+$dark: #221E1F !default;
 $black: #000 !default;
 
 $color-brand: #56C4C5 !default;
@@ -17,6 +10,11 @@ $color-brand-lighten: #B8E6E7 !default;
 $color-brand-sub: #F6CB52 !default;
 
 $color-highlight: #FF5D50 !default;
+
+$color-body: $dark !default;
+
+// box-shadow
+$box-shadow: 0px 2px 10px rgba($black, .14);
 
 
 // font

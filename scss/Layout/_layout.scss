@@ -5,6 +5,7 @@ html, body{
 body{
     font-family: $font-family-base;
     font-size: $font-size-base;
+    color: $color-body;
     line-height: 1.5;
 }
 
@@ -28,9 +29,16 @@ img{
 }
 
 
+.card{
+    margin: auto;
+    border-radius: .75rem;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+}
+
+
 
 // header
-
 header nav{
     // TODO: 最後再加 sticky 效果
     // position: sticky;
@@ -41,10 +49,17 @@ header nav{
     }
 }
 
+section{
+    margin: 100px 0;
+}
+
+
+
 @media screen and (max-width: 991px) {
 }
 
-@media screen and (max-width: 390px) {
+
+@media screen and (max-width: 767px) {
     header nav{
         border-bottom: 2px solid $color-brand-sub;
         margin-left: -20px;
@@ -52,7 +67,16 @@ header nav{
         padding-left: 20px;
         padding-right: 20px;
     }
+}
+
+@media screen and (max-width: 390px) {
     header nav .img-logo{
         height: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    header nav .img-logo {
+        height: 1.6rem;
     }
 }
