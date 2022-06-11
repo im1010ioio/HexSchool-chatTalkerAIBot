@@ -1,8 +1,11 @@
 // helpers
 @import "./Helpers/variants";
 
-// header
+// venders
+@import "./Venders/overwrite-slick";
 
+
+// header
 header{
     $outer-color-position: 50%;
     $outer-color: $color-brand-sub;
@@ -62,6 +65,9 @@ header{
     .row{
         margin-top: 3rem;
     }
+    .card{
+        overflow: hidden;
+    }
 }
 
 #section-feature{
@@ -89,6 +95,34 @@ header{
         justify-content: center;
         width: 5.375rem;
         height: 5.375rem;
+    }
+}
+
+#section-feedback{
+    $size-avatar: 5rem;
+    $offset-avatar: 2rem;
+    .user-box{
+        padding: 1rem;
+        padding-top: $size-avatar - $offset-avatar;
+    }
+    .card{
+        position: relative;
+        padding: 3rem 2rem 1.5rem 2rem;
+        margin: 0;
+    }
+    .img-user{
+        position: absolute;
+        top: -#{$size-avatar - $offset-avatar};
+        left: 2rem;
+        width: $size-avatar;
+        z-index: 1;
+    }
+    .row-star{
+        display: flex;
+        > img{
+            width: 1rem;
+            margin-left: 0.5rem;
+        }
     }
 }
 

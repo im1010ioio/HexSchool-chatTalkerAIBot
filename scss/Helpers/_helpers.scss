@@ -44,6 +44,7 @@
 // margin
 
 .m-auto{ margin: auto !important; }
+.mr-auto{ margin-right: auto !important; }
 
 .my-48{ margin: 3rem 0 !important; }  // 48px
 .my-24 { margin: 1.5rem 0 !important; }  // 24px
@@ -67,6 +68,7 @@
 
 .round{
     border-radius: 50% !important;
+    overflow: hidden;
 }
 
 .bg-light{

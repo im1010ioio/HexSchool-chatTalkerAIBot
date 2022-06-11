@@ -15,6 +15,10 @@ body{
     margin: auto;
 }
 
+hr{
+    border-top: 1px solid $gray-light;
+}
+
 img{
     display: block;
 }
@@ -32,7 +36,6 @@ img{
 .card{
     margin: auto;
     border-radius: .75rem;
-    overflow: hidden;
     box-shadow: $box-shadow;
 }
 
@@ -67,8 +70,6 @@ section{
     box-shadow: $box-shadow;
     z-index: 100;
 }
-
-
 
 
 @media screen and (max-width: 991px) {

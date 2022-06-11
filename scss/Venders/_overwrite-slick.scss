@@ -1,0 +1,35 @@
+
+
+$size-dots: 10px;
+.slick-dots{
+    position: static;
+    li{
+        margin: 0;
+        button{
+            width: 24px;
+            &:before {
+                content: "";
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: $size-dots;
+                height: $size-dots;
+                background-color: $gray-light;
+                border-radius: $size-dots;
+                opacity: 1;
+            }
+        }
+        &:hover{
+            button:before{
+                background-color: darken( $gray-light, 10% );
+            }
+        }
+        &.slick-active{
+            button:before{
+                width: 16px;
+                background-color: $color-brand-sub;
+                opacity: 1;
+            }
+        }
+    }
+}
