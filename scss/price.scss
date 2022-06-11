@@ -1,0 +1,25 @@
+header{
+    position: relative;
+    height: 30rem;
+    padding-top: 90px;
+    background-color: #F7F9FD;
+    border-bottom-left-radius: 300px;
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        z-index: 2;
+    }
+    .content-text{
+        margin-top: -4rem;
+    }
+    .img-bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 64%;
+        z-index: 1;
+    }
+}

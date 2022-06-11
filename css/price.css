@@ -1,1 +1,2 @@
-/* No CSS *//*# sourceMappingURL=price.css.map */
+header{position:relative;height:30rem;padding-top:90px;background-color:#F7F9FD;border-bottom-left-radius:300px}header .container{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:100%;z-index:2}header .content-text{margin-top:-4rem}header .img-bg{position:absolute;top:0;right:0;width:64%;z-index:1}
+/*# sourceMappingURL=price.css.map */
