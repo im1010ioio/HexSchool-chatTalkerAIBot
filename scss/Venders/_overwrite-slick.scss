@@ -1,6 +1,11 @@
-
-
 $size-dots: 10px;
+
+.slick-prev, .slick-next{
+    display: none;
+    left: 0;
+    pointer-events: none;
+}
+
 .slick-dots{
     position: static;
     li{
