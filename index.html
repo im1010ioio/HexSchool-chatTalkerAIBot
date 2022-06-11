@@ -8,6 +8,8 @@
     <title>ChatTalker 最全面的聊天機器人</title>
     <meta name="description" content="Facebook、Instagram、LINE 聊天機器人解決方案。">
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/">
     <!-- Style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,18 +22,18 @@
     <link href="/css/index.css" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container d-flex justify-content-space-between align-items-center">
+            <a href="/" title="返回首頁">
+                <div class="img-vertical img-logo">
+                    <img src="/images/logo.png" alt="ChatTalker Logo">
+                </div>
+            </a>
+            <a class="btn btn-highlight" href="/price.html">方案費用</a>
+        </div>
+    </nav>
     <header>
         <div class="container">
-            <nav>
-                <div class="d-flex justify-content-space-between align-items-center">
-                    <a href="/" title="返回首頁">
-                        <div class="img-vertical img-logo">
-                            <img src="/images/logo.png" alt="ChatTalker Logo">
-                        </div>
-                    </a>
-                    <a class="btn btn-highlight" href="/price.html">方案費用</a>
-                </div>
-            </nav>
             <div class="header-content">
                 <div class="content-text">
                     <h1 class="text-title-mini text-brand text-bold">ChatTalker 最全面的聊天機器人</h1>
@@ -427,9 +429,10 @@
     </footer>
     <button type="button" id="btn-top" class="btn btn-brand round">Top</button>
 
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/all.js"></script>
     <script src="/js/index.js"></script>
 </body>
 </html>

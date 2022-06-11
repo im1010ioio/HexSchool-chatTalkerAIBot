@@ -42,11 +42,19 @@ img{
 
 
 // header
-header nav{
-    // TODO: 最後再加 sticky 效果
-    // position: sticky;
-    // top: 0;
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-bottom: 2px solid transparent;
     padding: 1.5rem 0;
+    transition: $transition-base;
+    z-index: 100;
+    &.scrolling{
+        border-color: $color-brand-sub;
+        background-color: rgba($white, .9);
+    }
     .img-logo{
         height: 2.5rem;
     }
@@ -77,12 +85,8 @@ section{
 
 
 @media screen and (max-width: 767px) {
-    header nav{
-        border-bottom: 2px solid $color-brand-sub;
-        margin-left: -20px;
-        margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
+    .navbar{
+        border-color: $color-brand-sub;
     }
 #btn-top{
     right: 1rem;
@@ -94,13 +98,13 @@ section{
 }
 
 @media screen and (max-width: 390px) {
-    header nav .img-logo{
+    .navbar .img-logo{
         height: 2.2rem;
     }
 }
 
 @media screen and (max-width: 370px) {
-    header nav .img-logo {
+    .navbar .img-logo {
         height: 1.6rem;
     }
 }
