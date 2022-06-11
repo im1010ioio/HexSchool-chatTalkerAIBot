@@ -54,6 +54,11 @@
 .mb-16 { margin-bottom: 1rem !important; }  // 16px
 
 
+// padding
+
+.py-16 { padding: 1rem 0 !important; }  // 16px
+
+
 // other style
 
 .shadow {
@@ -62,4 +67,8 @@
 
 .round{
     border-radius: 50%;
+}
+
+.bg-light{
+    background-color: $light;
 }
