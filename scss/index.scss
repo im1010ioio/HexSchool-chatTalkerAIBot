@@ -89,18 +89,6 @@ header{
     }
 }
 
-footer{
-    .text-content{
-        padding-top: 20vw;
-        padding-bottom: 100px;
-        background-image: url("../images/home_footer.svg");
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
-    .text-title{
-        font-size: $font-size-32;
-    }
-}
 
 
 @media screen and (max-width: 1025px) {
@@ -255,16 +243,6 @@ footer{
                 min-width: 100%;
                 margin: 0;
             }
-        }
-    }
-    footer{
-        .text-content{
-            padding-top: 80vw;
-            padding-bottom: 4.5rem;
-            background-image: url("../images/footer_sm.svg");
-        }
-        .text-title{
-            font-size: $font-size-24;
         }
     }
 }
