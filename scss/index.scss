@@ -1,0 +1,92 @@
+// helpers
+@import "./Helpers/variants";
+
+header{
+    $outer-color-position: 50%;
+    $outer-color: $color-brand-sub;
+
+    position: relative;
+    background-image: linear-gradient(90deg, transparent $outer-color-position, $outer-color $outer-color-position, $outer-color 100%);
+    // overflow-x: hidden;
+    
+    .container{
+        position: relative;
+        background-image: url("../images/bg_home.svg");
+        background-color: $white;
+        background-position: 140% 0;
+        background-repeat: no-repeat;
+        min-height: 765px;
+        &:after{
+            $circle-size: 22.5rem;
+
+            content: "";
+            position: absolute;
+            left: -$circle-size;
+            bottom: -$circle-size/2;
+            display: block;
+            width: $circle-size;
+            height: $circle-size;
+            background-color: $color-brand;
+            border-radius: 50%;
+        }
+    }
+
+    .header-content, .content-text{
+        display: flex;
+    }
+
+    .content-text{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text-title-lg{
+        margin-bottom: 1rem;
+    }
+
+    .content-text, .content-img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    header{
+        .container{
+            background-position: 200% 0;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        .container {
+            min-height: auto;
+            background-position: -200% 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header{
+        &, .container{
+            background: none;
+        }
+        .header-content{
+            flex-direction: column;
+            align-items: center;
+        }
+        .content-text{
+            width: 100%;
+            padding-top: 2rem;
+        }
+        .content-img{
+            width: MIN(100%, 305px);
+            margin-top: 2rem;
+            background-image: url("../images/bg_home_sm.svg");
+            background-size: contain;
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+
+        }
+    }
+}
