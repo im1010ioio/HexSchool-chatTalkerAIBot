@@ -17,7 +17,6 @@ header{
         background-repeat: no-repeat;
         min-height: 768px;
 
-        // TODO:  圓形 RWD
         &:after{
             $circle-size: 22.5rem;
             content: "";
@@ -62,6 +61,35 @@ header{
         margin-top: 3rem;
     }
 }
+
+#section-feature{
+    .content-feature {
+        display: flex;
+        align-items: center;
+        > .item:nth-child(1){
+            width: 60%;
+        }
+    }
+    .card{
+        margin: 0;
+        padding: 1.5rem;
+    }
+    .row .item-card{
+        width: 235px;
+        margin-right: 3rem;
+        &:nth-child(1), &:nth-child(2){
+            padding-bottom: 1.75rem;
+        }
+    }
+    .round{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5.375rem;
+        height: 5.375rem;
+    }
+}
+
 
 
 @media screen and (max-width: 1025px) {
@@ -109,6 +137,29 @@ header{
         }
         .item{
             max-width: 292px;
+        }
+    }
+
+    #section-feature {
+        .content-feature {
+            >.item:nth-child(1) {
+                min-width: 55%;
+            }
+            .item-text {
+                padding-left: 2rem;
+            }
+        }
+
+        .card {
+            margin: 0;
+        }
+
+        .row .item-card {
+            width: 50%;
+            margin: 0;
+            &:nth-child(1), &:nth-child(2) {
+                margin-bottom: .5rem;
+            }
         }
     }
 }
@@ -171,6 +222,28 @@ header{
     #section-ch{
         .card{
             min-height: 388px;
+        }
+    }
+
+
+    #section-feature {
+        .content-feature {
+            flex-direction: column-reverse;
+    
+            >.item:nth-child(1) {
+                width: MIN(100%, 230px);
+            }
+            .item-text{
+                padding-left: 0;
+                margin-bottom: 2.75rem;
+                text-align: center;
+                &:not(:last-child){
+                }
+            }
+            .row .item-card {
+                min-width: 100%;
+                margin: 0;
+            }
         }
     }
 }

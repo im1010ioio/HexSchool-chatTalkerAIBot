@@ -45,7 +45,6 @@
 
 .m-auto{ margin: auto !important; }
 
-
 .my-48{ margin: 3rem 0 !important; }  // 48px
 .my-24 { margin: 1.5rem 0 !important; }  // 24px
 .my-16 { margin: 1rem 0 !important; }  // 16px
@@ -53,3 +52,14 @@
 .mb-48{ margin-bottom: 3rem !important; }  // 48px
 .mb-24 { margin-bottom: 1.5rem !important; }  // 24px
 .mb-16 { margin-bottom: 1rem !important; }  // 16px
+
+
+// other style
+
+.shadow {
+    box-shadow: $box-shadow !important;
+}
+
+.round{
+    border-radius: 50%;
+}

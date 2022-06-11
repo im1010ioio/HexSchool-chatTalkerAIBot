@@ -4,9 +4,9 @@ $width-spacing: .5rem;
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    margin: 0 -$width-spacing;
+    margin: auto -#{$width-spacing};
 
-    .item {
+    > .item {
         width: 100%;
         padding: 0 $width-spacing;
     }
@@ -15,15 +15,15 @@ $width-spacing: .5rem;
         height: 100%;
     }
 
-    &-per-2{ .item{ width: 50%;} }
-    &-per-3{ .item{ width: 33.3333%;} }
-    &-per-4{ .item{ width: 25%;} }
+    &-per-2{ > .item{ width: 50%;} }
+    &-per-3{ > .item{ width: 33.3333%;} }
+    &-per-4{ > .item{ width: 25%;} }
 }
 
 
 @media screen and (max-width: 991px) {
     .row-per-4{
-        .item{
+        > .item{
             width: 50%;
             padding: 1rem;
             &:nth-last-child(1), &:nth-last-child(2){
@@ -36,9 +36,9 @@ $width-spacing: .5rem;
 @media screen and (max-width: 767px) {
     .row{
         &-per-2, &-per-3, &-per-4{
-            .item{ width: 100%;}
+            > .item{ width: 100%;}
         }
-        .item{
+        > .item{
             &, &:nth-last-child(2){
                 padding-bottom: 1.5rem;
             }
