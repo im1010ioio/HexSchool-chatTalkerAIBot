@@ -1,0 +1,38 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: $font-family-base;
+    line-height: 1.5;
+}
+
+.container{
+    width: MIN(100%, 1125px);
+    padding: 0 20px;
+    margin: auto;
+}
+
+img{
+    display: block;
+}
+
+.img-horizon > img{
+    width: 100%;
+}
+
+
+.img-vertical > img{
+    height: 100%;
+}
+
+
+
+// header
+
+header{
+    padding: 1.5rem 0;
+    .img-logo{
+        height: 2.5rem;
+    }
+}

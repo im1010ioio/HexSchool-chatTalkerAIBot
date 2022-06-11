@@ -1,0 +1,26 @@
+@mixin btn-style($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    &:hover{
+        background-color: darken( $bg, 10% );
+    }
+}
+
+.btn{
+    display: inline-block;
+    font-size: $font-size-base;
+    padding: .5rem 2rem;
+    border-radius: 2.5rem;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    transition: $transition-base;
+    cursor: pointer;
+}
+
+.btn-brand{
+    @include btn-style($color-brand, $white);
+}
+.btn-highlight{
+    @include btn-style($color-highlight, $white);
+}

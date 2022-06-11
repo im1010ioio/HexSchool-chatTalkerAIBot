@@ -1,4 +1,20 @@
-@import "./Helpers/variant";
+// reset
+@import "./Venders/reset";
+
+*{
+    box-sizing: border-box;
+}
+
+// helpers
+@import "./Helpers/variants";
+@import "./Helpers/helpers";
+
+// layout
+@import "./Layout/layout";
+
+// components
+@import "./Components/buttons";
+
 
 body{
     background-color: $white;
