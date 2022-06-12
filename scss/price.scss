@@ -82,6 +82,11 @@ header{
 
 
 // section-plan
+.content-scroll-x {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 #section-plan{
     .container{
         position: relative;
@@ -174,12 +179,15 @@ header{
             height: $circle-size;
     }
     .row-plan-btn {
-        justify-content: flex-start;
+        display: block;
         margin-top: 1.5rem;
         margin-bottom: 2rem;
         padding: 0 20px;
-        .btn-group:not(:last-child){
-            margin-right: .375rem;
+        .btn-group{
+            display: inline-block;           
+            &, &:not(:last-child){
+                margin-right: .375rem;
+            }
         }
         .btn{
             padding: .5rem 1rem;

@@ -89,15 +89,6 @@ section{
 }
 
 
-.content-scroll-x{
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    > div{
-        display: block;
-    }
-}
-
-
 @media screen and (max-width: 991px) {
 }
 
