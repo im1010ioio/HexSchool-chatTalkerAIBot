@@ -82,6 +82,21 @@ header{
 
 
 // section-plan
+#section-plan{
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    .bg-circle{
+        $circle-size: 22.5rem;
+        left: -$circle-size*1.2;
+        bottom: 5rem;
+        width: $circle-size;
+        height: $circle-size;
+        background-color: $color-brand-sub-lighten;
+    }
+}
+
 .row-plan-btn{
     display: flex;
     justify-content: center;

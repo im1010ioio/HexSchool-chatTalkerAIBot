@@ -11,4 +11,7 @@ $(document).ready(function () {
             $(".navbar").removeClass("scrolling");
         };
     });
+    var rellax = new Rellax('.rellax', {
+        center: true
+    });
 });

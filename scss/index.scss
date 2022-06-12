@@ -4,6 +4,10 @@
 // venders
 @import "./Venders/overwrite-slick";
 
+// TODO: 遮擋裝飾的圓形背景
+// main{
+//     overflow: hidden;
+// }
 
 // header
 header{
@@ -23,17 +27,13 @@ header{
         padding-top: $height-navbar;
         min-height: 768px;
 
-        &:after{
+        .bg-circle{
             $circle-size: 22.5rem;
-            content: "";
-            position: absolute;
             left: -$circle-size;
             bottom: -$circle-size/2;
-            display: block;
             width: $circle-size;
             height: $circle-size;
             background-color: $color-brand;
-            border-radius: 50%;
         }
     }
 
@@ -63,18 +63,26 @@ header{
 }
 
 #section-ch{
+    position: relative;
+    z-index: 2;
     .row{
         margin-top: 3rem;
     }
     .card{
+        background-color: $white;
         overflow: hidden;
     }
 }
 
 #section-feature{
+    .container{
+        position: relative;
+    }
     .content-feature {
+        position: relative;
         display: flex;
         align-items: center;
+        z-index: 2;
         > .item:nth-child(1){
             width: 60%;
         }
@@ -97,11 +105,30 @@ header{
         width: 5.375rem;
         height: 5.375rem;
     }
+    .bg-circle{
+        $circle-size: 16rem;
+        // TODO: 圓形背景正確的位置, 需要 main overflow hidden
+        // $circle-size: 19.375rem;
+        position: absolute;
+        top: -$circle-size/3*2;
+        // right: -$circle-size/3*2;
+        right: 0;
+        width: $circle-size;
+        height: $circle-size;
+        background-color: $color-brand-lighten;
+    }
 }
 
 #section-feedback{
     $size-avatar: 5rem;
     $offset-avatar: 2rem;
+    .container{
+        position: relative;
+    }
+    .content-user{
+        position: relative;
+        z-index: 2;
+    }
     .user-box{
         padding: 1rem;
         padding-top: $size-avatar - $offset-avatar;
@@ -110,13 +137,14 @@ header{
         position: relative;
         padding: 3rem 2rem 1.5rem 2rem;
         margin: 0;
+        background-color: $white;
     }
     .img-user{
         position: absolute;
         top: -#{$size-avatar - $offset-avatar};
         left: 2rem;
         width: $size-avatar;
-        z-index: 1;
+        z-index: 2;
     }
     .row-star{
         display: flex;
@@ -124,6 +152,14 @@ header{
             width: 1rem;
             margin-left: 0.5rem;
         }
+    }
+    .bg-circle{
+        $circle-size: 9.375rem;
+        top: 2rem;
+        left: -3.5rem;
+        width: $circle-size;
+        height: $circle-size;
+        background-color: $color-brand-sub-lighten;
     }
 }
 
@@ -145,7 +181,7 @@ header{
     header{
         .container{
             background-position: 200% 0;
-            &:after {
+            .bg-circle {
                 $circle-size: 18rem;
                 width: $circle-size;
                 height: $circle-size;
@@ -161,7 +197,7 @@ header{
         .container {
             min-height: auto;
             background-position: 100% 100%;
-            &:after {
+            .bg-circle {
                 $circle-size: 9rem;
                 width: $circle-size;
                 height: $circle-size;
@@ -225,7 +261,7 @@ header{
             background: none;
         }
         .container{
-            &:after {
+            .bg-circle {
                 $circle-size: 7.5rem;
                 width: $circle-size;
                 height: $circle-size;

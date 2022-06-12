@@ -44,7 +44,11 @@ img{
     box-shadow: $box-shadow;
 }
 
-
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
 
 // header
 .navbar{
