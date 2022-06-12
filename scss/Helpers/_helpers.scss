@@ -21,6 +21,10 @@
 
 .text-bold { font-weight: bold !important; }
 
+.text-nowrap{
+    white-space: nowrap !important;
+}
+
 
 // size
 .text-18 { font-size: $font-size-18 !important; }     // always 18px
@@ -47,14 +51,17 @@
 .mr-auto{ margin-right: auto !important; }
 
 .my-48{ margin: 3rem 0 !important; }  // 48px
+.my-32 { margin: 2rem !important; }  // 32px
 .my-24 { margin: 1.5rem 0 !important; }  // 24px
 .my-16 { margin: 1rem 0 !important; }  // 16px
 
 .mb-48{ margin-bottom: 3rem !important; }  // 48px
+.mb-32 { margin-bottom: 2rem !important; }  // 32px
 .mb-24 { margin-bottom: 1.5rem !important; }  // 24px
 .mb-16 { margin-bottom: 1rem !important; }  // 16px
 
 .mr-48{ margin-right: 3rem !important; }  // 48px
+.mr-32 { margin-right: 2rem !important; }  // 32px
 .mr-24 { margin-right: 1.5rem !important; }  // 24px
 .mr-16 { margin-right: 1rem !important; }  // 16px
 
@@ -88,6 +95,9 @@
 
 .shadow {
     box-shadow: $box-shadow !important;
+}
+.shadow-none {
+    box-shadow: none !important;
 }
 
 .round{

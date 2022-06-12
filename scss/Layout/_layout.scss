@@ -16,7 +16,12 @@ body{
 }
 
 hr{
+    border: 0;
     border-top: 1px solid $gray-light;
+}
+
+small{
+    font-size: .75rem;
 }
 
 img{
@@ -77,6 +82,15 @@ section{
     text-align: center;
     box-shadow: $box-shadow;
     z-index: 100;
+}
+
+
+.content-scroll-x{
+    width: 100%;
+    overflow: hidden;
+    > div{
+        overflow: auto;
+    }
 }
 
 

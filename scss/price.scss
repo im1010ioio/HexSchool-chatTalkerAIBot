@@ -1,5 +1,9 @@
+// helpers
+@import "./Helpers/variants";
+
 @import "./Components/list";
 
+// header
 header{
     position: relative;
     height: 30rem;
@@ -71,5 +75,91 @@ header{
             padding-left: 0;
             margin-top: 0;
         }
+    }
+}
+
+
+// section-plan
+.row-plan-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    .btn-group:not(:last-child){
+        margin-right: 1rem;
+    }
+}
+
+.row-plan-card{
+    display: flex;
+    justify-content: center;
+}
+
+.card-plan{
+    margin: 0;
+    &:not(:last-child){
+        margin-right: 1.25rem;
+    }
+    .card-body{
+        padding: 2rem 1.5rem;
+    }
+}
+
+.card-plan-price{
+    min-width: 10.56rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    .text-number{
+        font-size: 2rem;
+        font-family: $font-family-number;
+        margin-right: 0.25rem;
+    }
+}
+.text-equal{
+    font-size: 1.82rem;
+    margin: 0 1.25rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-plan-price{
+        min-width: auto;
+        .text-number{
+            font-size: 1.75rem;
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .card-plan-price {
+        flex-grow: 1;
+        padding: 1rem 0;
+    }
+    .text-equal{
+        margin: 0 1rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .row-plan-btn {
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+        padding: 0 20px;
+        .btn-group:not(:last-child){
+            margin-right: .375rem;
+        }
+        .btn{
+            padding: .5rem 1rem;
+        }
+    }
+    .card-plan {
+        .card-body{
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    .row-plan-card {
+        flex-direction: column;
+    }
+    .card-plan:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 1.5rem;
     }
 }

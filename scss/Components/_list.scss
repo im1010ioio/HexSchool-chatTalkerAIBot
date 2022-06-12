@@ -1,0 +1,34 @@
+.list{
+    > li:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}
+
+.list-check{
+    > li{
+        display: flex;
+        align-items: baseline;
+        &::before{
+            $height-icon: 1rem;
+            content: "";
+            display: inline-block;
+            width: $height-icon*1.25;
+            height: $height-icon;
+            margin-right: .75rem;
+            background-image: url("../images/icon_check.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .list-check{
+        > li{
+            &::before{
+                $height-icon: .75rem;
+                width: $height-icon*1.25;
+                height: $height-icon;
+            }
+        }
+    }
+}
