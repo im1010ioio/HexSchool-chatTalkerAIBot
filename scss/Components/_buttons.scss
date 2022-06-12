@@ -1,21 +1,37 @@
-@mixin btn-style($bg, $color) {
-    background-color: $bg;
+@mixin btn-style($main-color, $color) {
+    background-color: $main-color;
+    border-color: $main-color;
     color: $color;
-    &:hover{
-        background-color: darken( $bg, 10% );
+    &:hover, &:focus{
+        background-color: darken( $main-color, 10% );
+    }
+}
+
+@mixin btn-outline-style($main-color, $color) {
+    background-color: transparent;
+    border-color: $main-color;
+    color: $main-color;
+
+    &:hover {
+        background-color: $main-color;
+        color: $white;
     }
 }
 
 .btn{
     display: inline-block;
     font-size: $font-size-base;
-    padding: .5rem 2rem;
+    padding: .75rem 2rem;
+    border: 1px solid transparent;
     border-radius: 2.5rem;
     background-color: transparent;
-    border: none;
     text-decoration: none;
     transition: $transition-base;
     cursor: pointer;
+}
+
+.btn-narrow{
+    padding: .5rem 2rem;
 }
 
 .btn-brand{
@@ -23,4 +39,16 @@
 }
 .btn-highlight{
     @include btn-style($color-highlight, $white);
+}
+
+.btn-outline-brand {
+    @include btn-outline-style($color-brand, $white);
+}
+
+input[type="radio"], input[type="checkbox"]{
+    &:checked{
+        ~ label.btn-outline-brand{
+            @include btn-style($color-brand, $white);
+        }
+    }
 }

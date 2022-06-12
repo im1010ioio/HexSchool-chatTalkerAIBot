@@ -1,3 +1,5 @@
+@import "./Components/list";
+
 header{
     position: relative;
     height: 30rem;
@@ -21,5 +23,53 @@ header{
         right: 0;
         width: 64%;
         z-index: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header{
+        .content-text{
+            padding-left: 4rem;
+        }
+        .img-bg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70%;
+            z-index: 1;
+        }
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    header{
+    border-bottom-left-radius: 150px;
+        .content-text{
+            padding-left: 4rem;
+            margin-top: 7rem;
+        }
+        .img-bg{
+            position: absolute;
+            top: auto;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        margin-top: 105px;
+        padding-top: 2rem;
+        .container {
+            justify-content: flex-start;
+        }
+        .content-text {
+            padding-left: 0;
+            margin-top: 0;
+        }
     }
 }
