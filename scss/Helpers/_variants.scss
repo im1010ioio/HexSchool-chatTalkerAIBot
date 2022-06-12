@@ -29,12 +29,12 @@ $font-size-28:   1.75rem   !default;    // 28px
 $font-size-32:   2rem      !default;    // 32px
 $font-size-48:   3rem      !default;    // 48px
 
-// 18 20 32 48
-
 $font-family-base: "Noto Sans TC", "Noto Sans", Arial, Helvetica, sans-serif !default;
 $font-family-heighlight: "Wendy One", sans-serif !default;
 $font-family-number: "Comfortaa", sans-serif !default;
 
-
 // transition
 $transition-base: .3s;
+
+// others
+$height-navbar: 5.625rem;

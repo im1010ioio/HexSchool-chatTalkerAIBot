@@ -6,10 +6,11 @@
 // header
 header{
     position: relative;
-    height: 30rem;
-    padding-top: 90px;
+    height: 32rem;
+    padding-top: 8rem;
     background-color: #F7F9FD;
     border-bottom-left-radius: 300px;
+    overflow: hidden;
     .container{
         position: relative;
         display: flex;
@@ -66,8 +67,9 @@ header{
 
 @media screen and (max-width: 767px) {
     header {
-        margin-top: 105px;
+        margin-top: $height-navbar;
         padding-top: 2rem;
+        height: 123vw;
         .container {
             justify-content: flex-start;
         }
@@ -84,6 +86,7 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    margin-bottom: 3rem;
     .btn-group:not(:last-child){
         margin-right: 1rem;
     }
@@ -141,6 +144,7 @@ header{
     .row-plan-btn {
         justify-content: flex-start;
         margin-top: 1.5rem;
+        margin-bottom: 2rem;
         padding: 0 20px;
         .btn-group:not(:last-child){
             margin-right: .375rem;
@@ -161,5 +165,115 @@ header{
     .card-plan:not(:last-child){
         margin-right: 0;
         margin-bottom: 1.5rem;
+    }
+}
+
+
+// section-faq
+#section-faq h3{
+    margin-bottom: 3rem;
+}
+
+.card-faq{
+    width: MIN(100%, 56.5rem);
+    overflow: hidden;
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}
+
+.content-faq-title{
+    display: flex;
+    font-family: monospace;
+    padding: 1rem 2rem;
+    transition: $transition-base;
+    &:hover{
+        color: $color-brand;
+        background-color: rgba( $color-brand, .075 );
+    }
+    cursor: pointer;
+}
+
+.content-faq-desc{
+    height: 0;
+    overflow: hidden;
+    p{
+        color: $gray;
+        padding: .5rem 2rem 2rem 2rem;
+    }
+}
+
+.icon-plus{
+    position: relative;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.15rem;
+    margin-left: auto;
+    transform: rotate(-90deg);
+    &, &:before, &:after{
+        transition: $transition-base;
+    }
+    &:before, &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 2px;
+        background-color: $color-brand;
+    }
+    &:after{
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+}
+
+input[name="faq"]:checked {
+    ~.content-faq-title {
+        color: $color-brand;
+        font-weight: bold;
+
+        .icon-plus {
+            transform: rotate(0);
+
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+
+    ~.content-faq-desc {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .card-faq{
+        width: MIN(100%, 50.5rem);
+    }
+}
+
+@media screen and (max-width: 991px), (pointer: coarse){
+    .content-faq-title:hover {
+        color: $color-body;
+        background-color: $white;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #section-faq{
+        margin-bottom: 60px;
+        h3{
+            margin-bottom: 2rem;
+        }
+    }
+    .content-faq-title {
+        padding: 1rem;
+    }
+    .content-faq-desc p{
+        padding: 0 1rem 1.5rem 1rem;
     }
 }
