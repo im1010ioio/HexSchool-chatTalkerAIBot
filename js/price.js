@@ -31,4 +31,18 @@ $(document).ready(function () {
             }
         }, 350);
     });
+
+    $(".content-faq-title").click(function() {
+        var currentFAQ = $(this).siblings("input[name=faq]").prop('checked');
+        var speedFAQ = 250;
+        
+        if (currentFAQ == false) {
+            $(this).siblings(".content-faq-desc").slideDown(speedFAQ);
+            $(this).parents(".card-faq").siblings(".card-faq").find(".content-faq-desc").slideUp(speedFAQ);
+            $(this).parents(".card-faq").siblings(".card-faq").find("input[name=faq]").prop('checked', false);
+        } else {
+            $(this).siblings(".content-faq-desc").slideUp(speedFAQ);
+        }
+    });
+
 });

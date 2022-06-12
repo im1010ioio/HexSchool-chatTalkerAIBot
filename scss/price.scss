@@ -195,8 +195,7 @@ header{
 }
 
 .content-faq-desc{
-    height: 0;
-    overflow: hidden;
+    display: none;
     p{
         color: $gray;
         padding: .5rem 2rem 2rem 2rem;
@@ -243,10 +242,6 @@ input[name="faq"]:checked {
                 opacity: 0;
             }
         }
-    }
-
-    ~.content-faq-desc {
-        height: auto;
     }
 }
 
