@@ -90,10 +90,10 @@ section{
 
 
 .content-scroll-x{
-    width: 100%;
-    overflow: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     > div{
-        overflow: auto;
+        display: block;
     }
 }
 
