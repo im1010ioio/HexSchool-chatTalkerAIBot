@@ -329,6 +329,12 @@ header{
                 margin: 0;
             }
         }
+
+        .bg-circle {
+            $circle-size: 8.4rem;
+            width: $circle-size;
+            height: $circle-size;
+        }
     }
     #section-ending{
         padding-top: 80vw;

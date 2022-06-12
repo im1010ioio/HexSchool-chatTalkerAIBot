@@ -113,6 +113,9 @@ header{
 }
 
 .card-plan{
+    position: relative;
+    z-index: 2;
+    background-color: $white;
     margin: 0;
     &:not(:last-child){
         margin-right: 1.25rem;
@@ -138,6 +141,13 @@ header{
 }
 
 @media screen and (max-width: 1200px) {
+    #section-plan .bg-circle {
+        $circle-size: 18rem;
+        left: -$circle-size/4*3;
+        bottom: 10%;
+        width: $circle-size;
+        height: $circle-size;
+    }
     .card-plan-price{
         min-width: auto;
         .text-number{
@@ -156,6 +166,13 @@ header{
     }
 }
 @media screen and (max-width: 767px) {
+    #section-plan .bg-circle {
+            $circle-size: 12.5rem;
+            left: -$circle-size/3*2;
+            bottom: 40%;
+            width: $circle-size;
+            height: $circle-size;
+    }
     .row-plan-btn {
         justify-content: flex-start;
         margin-top: 1.5rem;
