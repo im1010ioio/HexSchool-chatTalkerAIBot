@@ -7,8 +7,8 @@
 
 ### 問題
 > 我是用 `input radio` 去控制畫面呈現，Click `label` 的同時想要取得現在已改變的 `value`，然後再依這個去做判斷。但是取到正確的值好像有一點點時間差，不知道是為什麼？目前用 `setTimeout` 去防止出錯，不曉得老師和助教這邊有沒有更好的方式？
-這邊推測應該是因為 click `.btn-price` 的瞬間， `checked` 的狀態還是在上一個 `input` ，所以會造成取值時有誤
 
+這邊推測應該是因為 click `.btn-price` 的瞬間， `checked` 的狀態還是在上一個 `input` ，所以會造成取值時有誤
   
 可以參考不同的取值方式，例如從 `click` 的 `button` 取文字 `$(this).text().split("位")[0];`
 
